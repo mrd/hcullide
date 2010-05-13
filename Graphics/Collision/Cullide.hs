@@ -83,13 +83,13 @@ queryResult i = do
   finalizeForeignPtr x
   return r
 
--- |Collision detection
+-- |Collision detection, returns whether potential collision was
+-- detected, for each object.
 detect :: IO a      -- ^ action which transforms the viewing volume
                     -- into a cube with side-length 1 centered on the
                     -- origin.
        -> [IO b]    -- ^ list of actions that draw the objects.
-       -> IO [Bool] -- ^ whether potential collision was detected, for
-                    -- each object
+       -> IO [Bool]
 detect transform actions = do
   let n = length actions
   
