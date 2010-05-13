@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>hcullide-1.0: Collision detection using CULLIDE algorithm</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+>hcullide-1.0: Collision detection using CULLIDE algorithm</TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>hcullide-1.0: Collision detection using CULLIDE algorithm</TD
+></TR
+><TR
+><TD CLASS="doc"
+>The CULLIDE algorithm performs pixel-space preliminary
+collision detection by leveraging an occlusion-query OpenGL
+extension for hardware assistance.  By rendering a set of
+OpenGL commands using an orthographic projection from the
+three axes, it is possible to determine which commands did not
+produce overlapping output, and therefore, eliminate those
+objects from consideration.  All this algorithm requires is a
+list of OpenGL commands that draw the objects, and an OpenGL
+command that transforms the world into a unit cube around the
+origin.  Therefore it can be used generically, without any
+further consideration of object-space, to greatly speed-up the
+process of collision detection.
+</TD
+></TR
+><TR
+><TD CLASS="section1"
+>Modules</TD
+></TR
+><TR
+><TD
+><TABLE CLASS="vanilla2" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD STYLE="width: 50em"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'n:0')" ALT="show/hide"
+>Graphics</TD
+><TD
+></TD
+><TD
+></TD
+></TR
+><TR
+><TD STYLE="padding: 0; padding-left: 2em" COLSPAN="3"
+><TABLE CLASS="vanilla2" CELLSPACING="0" CELLPADDING="0" ID="n:0" STYLE="display:block;"
+><TR
+><TD STYLE="width: 48em"
+><IMG SRC="minus.gif" CLASS="coll" ONCLICK="toggle(this,'n:1')" ALT="show/hide"
+>Collision</TD
+><TD
+></TD
+><TD
+></TD
+></TR
+><TR
+><TD STYLE="padding: 0; padding-left: 2em" COLSPAN="3"
+><TABLE CLASS="vanilla2" CELLSPACING="0" CELLPADDING="0" ID="n:1" STYLE="display:block;"
+><TR
+><TD STYLE="padding-left: 1.25em;width: 46em"
+><A HREF="Graphics-Collision-Cullide.html"
+>Graphics.Collision.Cullide</A
+></TD
+><TD
+></TD
+><TD
+></TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="botbar"
+>Produced by <A HREF="http://www.haskell.org/haddock/"
+>Haddock</A
+> version 2.6.0</TD
+></TR
+></TABLE
+></BODY
+></HTML
+>
