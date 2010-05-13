@@ -1,0 +1,27 @@
+Name:           hcullide
+Version:        1.0
+Category:       Graphics
+Cabal-Version:  >= 1.2
+Build-type:     Simple
+License:        BSD3
+License-file:   LICENSE
+Author:         Matthew Danish <mrd@debian.org>
+Maintainer:     mrd@debian.org
+Synopsis:       Collision detection using CULLIDE algorithm
+Description:
+        The CULLIDE algorithm performs pixel-space preliminary
+        collision detection by leveraging an occlusion-query OpenGL
+        extension for hardware assistance.  By rendering a set of
+        OpenGL commands using an orthographic projection from the
+        three axes, it is possible to determine which commands did not
+        produce overlapping output, and therefore, eliminate those
+        objects from consideration.  All this algorithm requires is a
+        list of OpenGL commands that draw the objects, and an OpenGL
+        command that transforms the world into a unit cube around the
+        origin.  Therefore it can be used generically, without any
+        further consideration of object-space, to greatly speed-up the
+        process of collision detection.
+Extra-source-files: README, CollisionTest.hs
+Library
+  Build-Depends:   base >= 3 && < 5, array, OpenGLRaw, OpenGL
+  Exposed-Modules: Graphics.Collision.Cullide
