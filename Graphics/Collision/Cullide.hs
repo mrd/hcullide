@@ -86,8 +86,7 @@ queryResult i = do
 -- |Collision detection, returns whether potential collision was
 -- detected, for each object.
 detect :: IO ()      -- ^ action which transforms the viewing volume
-                     -- into a cube with side-length 1 centered on the
-                     -- origin.
+                     -- into a unit cube centered on the origin.
        -> [IO ()]    -- ^ list of actions that draw the objects.
        -> IO [Bool]
 detect transform actions = do
